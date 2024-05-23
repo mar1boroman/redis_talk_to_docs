@@ -1,0 +1,149 @@
+.hero-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.upload-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.upload-dropzone {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.upload-dropzone input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.chatbox {
+    position: fixed;
+    bottom: 80px;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 50%;
+    max-height: 70%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chatbox-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.chatbox-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.chatbox-footer {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+.chatbox-footer input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.chatbox-footer button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+}
+
+.chatbox-float-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatbox-float-button .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.message.user {
+    justify-content: flex-start;
+}
+
+.message.bot {
+    justify-content: flex-end;
+}
+
+.message .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.message.bot .avatar {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.message .text {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.message.user .text {
+    background-color: #fff3cd;
+}
+
+.message.bot .text {
+    background-color: #d4edda;
+    margin-left: 10px; /* Ensure the text margin on the left for bot */
+}

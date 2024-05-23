@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot App</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="hero-section">
+        <h1>Welcome to Our App</h1>
+        <p>This is a brief description of the app.</p>
+    </div>
+    <div class="upload-section">
+        <h2>Upload Files</h2>
+        <div class="upload-dropzone" id="upload-dropzone">
+            <p>Drag and drop files here or click to upload</p>
+            <input type="file" id="file-input" multiple>
+        </div>
+    </div>
+
+    <button class="chatbox-float-button" id="chatbox-float-button" onclick="toggleChatbox()">💬</button>
+    <div class="chatbox" id="chatbox">
+        <div class="chatbox-header" onclick="toggleChatbox()">Chatbot</div>
+        <div class="chatbox-body" id="chatbox-body">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="chatbox-footer">
+            <input type="text" id="chatbox-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
